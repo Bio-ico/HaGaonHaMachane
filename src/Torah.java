@@ -23,13 +23,13 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 public class Torah extends Command {
 	public Torah() {
 		this.name = "tanakh";
-		this.help = "Grabs a Tanakh verse from Sefaria's API";
+		this.help = "Envoie un verset biblique de Sefaria";
 	}
 	protected void execute(CommandEvent event) {
 		String args = event.getArgs();
 		String sURL = "https://www.sefaria.org/api/texts/";
 		String book = args.substring(0,args.lastIndexOf(" "));
-		String translation = "The Koren Jerusalem Bible";
+		String translation = "Bible du Rabbinat 1899 [fr]";
 		String verseText = "";
 		int chapter = Integer.parseInt(args.substring(args.lastIndexOf(" ")+1,args.indexOf(':')));
 		if(args.indexOf("-") == -1) {

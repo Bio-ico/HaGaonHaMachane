@@ -22,13 +22,13 @@ import net.dv8tion.jda.core.Permission;
 
 public class About extends Command{
 	public About() {
-		this.name = "about";
+		this.name = "sur";
 	}
 
 	public void execute(CommandEvent event) {
 		Permission[] recommendedPerms = new Permission[] {Permission.MESSAGE_READ, Permission.MESSAGE_WRITE};
 		String link = event.getJDA().asBot().getInviteUrl(recommendedPerms);
-		String message = "Hello! I am HaGaon HaMachane! I am a discord bot that can quote from an assortment of Jewish Holy Texts!\n [Invite](" + link + ") me to your server!\n[Find me on Github!](https://github.com/djkirsch/HaGaonHaMachane)";
+		String message = "Salut ! Je suis HaGaon HaMachane ! Je suis un bot discord qui peut citer un assortiment de textes sacrés juifs!\n [Invite](" + link + ") moi à votre serveur !\n[Trouve-moi sur Github !](https://github.com/djkirsch/HaGaonHaMachane)";
 		SendVerse.sendEmbed("About", message, event);
 	}
 
